@@ -17,6 +17,18 @@
     <script src="modal.js"></script>
   </head>
   <body>
-   <uc-modal></uc-modal>
+   <uc-modal>
+    <p> With your confirmation you agree to the terms of service.</p>
+   </uc-modal>
+   <p>Please confirm your choice.</p>
+   <button>Show details & Confirm</button>
+   <script>
+      const confirmBtn = document.querySelector('button');
+      const modal = document.querySelector('uc-modal');
+
+      confirmBtn.addEventListener('click', ()=>{
+        modal.setAttribute('opened', '')
+      });
+   </script>
   </body>
 </html>
